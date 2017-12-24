@@ -11748,17 +11748,19 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
   <span class="n">function</span> <span class="n">code_toggle</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">code_shown</span><span class="p">){</span>
       <span class="err">$</span><span class="p">(</span><span class="s1">&#39;div.input&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="s1">&#39;500&#39;</span><span class="p">);</span>
-      <span class="err">$</span><span class="p">(</span><span class="s1">&#39;#toggleButton&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">val</span><span class="p">(</span><span class="s1">&#39;Show Code&#39;</span><span class="p">)</span>
+      <span class="err">$</span><span class="p">(</span><span class="s1">&#39;#toggleButton&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;Show Code&#39;</span>
+      <span class="err">$</span><span class="p">(</span><span class="s1">&#39;#toggleButton&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">className</span> <span class="o">=</span> <span class="s1">&#39;btn btn-primary&#39;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
       <span class="err">$</span><span class="p">(</span><span class="s1">&#39;div.input&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;500&#39;</span><span class="p">);</span>
-      <span class="err">$</span><span class="p">(</span><span class="s1">&#39;#toggleButton&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">val</span><span class="p">(</span><span class="s1">&#39;Hide Code&#39;</span><span class="p">)</span>
+      <span class="err">$</span><span class="p">(</span><span class="s1">&#39;#toggleButton&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;Hide Code&#39;</span>
+      <span class="err">$</span><span class="p">(</span><span class="s1">&#39;#toggleButton&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">className</span> <span class="o">=</span> <span class="s1">&#39;btn btn-danger&#39;</span>
     <span class="p">}</span>
     <span class="n">code_shown</span> <span class="o">=</span> <span class="o">!</span>code_shown
   <span class="p">}</span>
@@ -11768,7 +11770,12 @@ div#notebook {
     <span class="err">$</span><span class="p">(</span><span class="s1">&#39;div.input&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">hide</span><span class="p">()</span>
   <span class="p">});</span>
 <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">form</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;javascript:code_toggle()&quot;</span><span class="o">&gt;&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;toggleButton&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Show Code&quot;</span><span class="o">&gt;&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
+<span class="o">&lt;!</span>-- Latest compiled and minified CSS --&gt;
+<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;toggleButton&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Show Code&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;height=100px; width=300px&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;btn btn-primary&quot;</span> <span class="n">onclick</span><span class="o">=</span><span class="n">javascript</span><span class="p">:</span><span class="n">code_toggle</span><span class="p">()</span><span class="o">&gt;</span><span class="n">Show</span> <span class="n">Code</span><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
+<span class="o">.</span><span class="n">container</span> <span class="p">{</span> <span class="n">width</span><span class="p">:</span><span class="mi">90</span><span class="o">%</span> <span class="o">!</span>important<span class="p">;</span> <span class="o">}</span>
+<span class="o">&lt;/</span><span class="n">style</span><span class="o">&gt;</span>
 </pre></div>
 
 </div>
@@ -11782,7 +11789,7 @@ div#notebook {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-10-a0408b3c578e&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-11-c5b5a9e63360&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
 <span class="ansi-red-fg">    &lt;script&gt;</span>
     ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
@@ -11796,7 +11803,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -11812,6 +11819,11 @@ div#notebook {
 <span class="kn">import</span> <span class="nn">zlib</span>
 <span class="kn">import</span> <span class="nn">string</span>
 
+<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="kn">as</span> <span class="nn">go</span>
+<span class="kn">from</span> <span class="nn">plotly.tools</span> <span class="kn">import</span> <span class="n">FigureFactory</span> <span class="k">as</span> <span class="n">FF</span>
+<span class="kn">from</span> <span class="nn">plotly.offline</span> <span class="kn">import</span> <span class="n">download_plotlyjs</span><span class="p">,</span> <span class="n">init_notebook_mode</span><span class="p">,</span> <span class="n">plot</span><span class="p">,</span> <span class="n">iplot</span>
+<span class="n">init_notebook_mode</span><span class="p">(</span><span class="n">connected</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
 <span class="o">%</span><span class="k">reload_ext</span> autoreload
 <span class="o">%</span><span class="k">autoreload</span> 2
 
@@ -11822,6 +11834,21 @@ div#notebook {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
+</div>
+
+</div>
+
 </div>
 </div>
 
